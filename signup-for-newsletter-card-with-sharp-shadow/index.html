@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full" hidden>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup For Newsletter Card With Sharp Shadow</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="/signup-for-newsletter-card-with-sharp-shadow/index.js"></script>
+</head>
+<body class="h-full font-body bg-lightBackground flex justify-center items-center transition-colors text-darkBackground dark:bg-primaryDark dark:text-lightBackground">
+    <!-- card modal component -->
+    <div class="relative bg-white p-8 shadow-card rounded-xl flex flex-col dark:bg-darkBackground">
+        <div class="flex mb-4">
+            <img class="-mt-20 w-40 h-40 mr-4" src="/signup-for-newsletter-card-with-sharp-shadow/assets/img/desert.svg">
+            <div class="flex flex-col">
+                <h3 class="font-semibold text-3xl">Don't miss out.</h3>
+                <p class="text-lg">Sign up for out newsletter to stay in the loop.</p>
+            </div>
+        </div>
+        <div class="flex">
+            <input class="w-full text-lg font-medium px-4 py-3 mr-4 bg-lightBackground focus:outline-none dark:bg-primaryDark dark:text-white" type="text" placeholder="vasanth@vasanthdeveloper.com">
+            <button class="px-5 py-3 text-lg rounded-md bg-primary text-white transition-colors focus:outline-none hover:bg-primaryLight">Subscribe</button>
+        </div>
+        <button class="absolute p-1 text-primary top-3 right-3 rounded-md bg-lightBackground transition-colors focus:outline-none hover:bg-primary hover:text-white dark:bg-primaryDark dark:text-white" onclick="document.querySelector('html').classList.toggle('dark')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+        </button>
+    </div>
+</body>
+</html>
