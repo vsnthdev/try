@@ -1,36 +1,41 @@
-import { setup } from "https://cdn.skypack.dev/twind/shim";
-import * as colors from "https://cdn.skypack.dev/twind/colors";
 
-setup({
-    hash: false,
-    darkMode: true,
+tailwind.config = {
     theme: {
         fontFamily: {
-            body: ['Lexend Deca', 'sans-serif']
+            body: ['Basically A Sans Serif', 'sans-serif']
         },
         container: {
             center: true
         },
         extend: {
             colors: {
-                gray: colors.blueGray,
                 white: '#FFFFFF',
                 youtube: '#FF0000',
                 discord: '#5662F6',
-                twitter: '#1E95FF'
+                twitter: '#1E95FF',
+                primary: '#adcfff'
             },
-            backgroundColor: {
-                html: '#e3f2fd',
+            backgroundImage: {
+                'main-gradient': 'linear-gradient(0deg, rgba(255,255,255,0) 0%, var(--gradient-primary) 75%)'
+            },
+            width: {
+                circle: '42rem'
+            },
+            height: {
+                circle: '42rem'
             },
             minWidth: {
                 nav: '12rem'
             },
             inset: {
                 nav: '4.5rem'
+            },
+            zIndex: {
+                '-10': '-10',
             }
         }
     }
-})
+}
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('/app-navbar/sw.js')
 

@@ -1,3 +1,41 @@
+:root {
+    --gradient-circle-left-radius: 72rem;
+    --gradient-circle-right-radius: 52rem;
+    --gradient-left: #3590f3;
+    --gradient-right: #5d45c5;
+    --gradient-primary: #006CFF;
+}
+
 header nav.opened {
     transform: translateX(0px);
+}
+
+.circles {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.circles * {
+    content: '';
+    filter: blur(150px);
+    position: absolute;
+    border-radius: 999px;
+}
+
+.circles .left {
+    background-color: var(--gradient-left);
+    right: calc(-1 * calc(var(--gradient-circle-left-radius) / 2));
+    top: calc(-1 * calc(var(--gradient-circle-left-radius) / 2));
+    width: var(--gradient-circle-left-radius);
+    height: var(--gradient-circle-left-radius);
+}
+
+.circles .right {
+    background-color: var(--gradient-right);
+    left: calc(-1 * calc(var(--gradient-circle-right-radius) / 2));
+    top: calc(-1 * calc(var(--gradient-circle-right-radius) / 2));
+    width: var(--gradient-circle-right-radius);
+    height: var(--gradient-circle-right-radius);
 }
