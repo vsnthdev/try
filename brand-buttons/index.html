@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Buttons | Try out — Vasanth Srivatsa</title>
+
+    <script src="https://cdn-tailwindcss.vercel.app"></script>
+    <script src="/brand-buttons/index.js"></script>
+
+    <style type="text/tailwindcss">
+        .btn {
+            @apply bg-primary text-white ring-primary font-semibold px-4 py-2 rounded-md transition ring-offset-2 focus:outline-none focus:ring;
+        }
+
+        .btn.alt {
+            @apply bg-primary-alt text-primary ring-primary;
+        }
+        
+        .btn.secondary {
+            @apply bg-secondary text-white ring-secondary;
+        }
+
+        .btn.secondary.alt {
+            @apply bg-gray-200 text-gray-900 ring-secondary;
+        }
+
+        .btn.danger {
+            @apply bg-red-500 text-white ring-red-500;
+        }
+
+        .btn.danger.alt {
+            @apply bg-red-100 text-red-500 ring-red-500;
+        }
+
+        .btn.success {
+            @apply bg-teal-500 text-white ring-teal-500;
+        }
+
+        .btn.success.alt {
+            @apply bg-teal-100 text-teal-500 ring-teal-500;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-body flex space-x-20 items-center justify-center h-screen">
+    <div class="flex flex-col space-y-4">
+        <h3 class="font-bold text-5xl mb-5">Buttons</h3>
+        <div class="flex space-x-4">
+            <div>
+                <button class="btn">
+                    Primary
+                </button>
+            </div>
+            <div>
+                <button class="btn alt">
+                    Primary
+                </button>
+            </div>
+        </div>
+        <div class="flex space-x-4">
+            <div>
+                <button class="btn secondary">
+                    Secondary
+                </button>
+            </div>
+            <div>
+                <button class="btn secondary alt">
+                    Secondary
+                </button>
+            </div>
+        </div>
+        <div class="flex space-x-4">
+            <div>
+                <button class="btn danger">
+                    Danger
+                </button>
+            </div>
+            <div>
+                <button class="btn danger alt">
+                    Danger
+                </button>
+            </div>
+        </div>
+        <div class="flex space-x-4">
+            <div>
+                <button class="btn success">
+                    Success
+                </button>
+            </div>
+            <div>
+                <button class="btn success alt">
+                    Success
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
