@@ -9,9 +9,13 @@ tailwind.config = {
         extend: {
             colors: {
                 primary: '#006CFF',
+                'primary-dark': '#005DE0',
                 'primary-alt': '#D6E7FF',
-                secondary: '#000000',
-                'secondary-alt': '#E2E8F0'
+                'primary-alt-dark': '#C2DBFF',
+                secondary: '#0d0106',
+                'secondary-light': '#333333',
+                'secondary-alt': '#E2E8F0',
+                'secondary-alt-dark': '#D7DFEA'
             }
         }
     }

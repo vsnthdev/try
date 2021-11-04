@@ -9,88 +9,54 @@
 
     <script src="https://cdn-tailwindcss.vercel.app"></script>
     <script src="/brand-buttons/index.js"></script>
-
-    <style type="text/tailwindcss">
-        .btn {
-            @apply bg-primary text-white ring-primary font-semibold px-4 py-2 rounded-md transition ring-offset-2 focus:outline-none focus:ring;
-        }
-
-        .btn.alt {
-            @apply bg-primary-alt text-primary ring-primary;
-        }
-        
-        .btn.secondary {
-            @apply bg-secondary text-white ring-secondary;
-        }
-
-        .btn.secondary.alt {
-            @apply bg-gray-200 text-gray-900 ring-secondary;
-        }
-
-        .btn.danger {
-            @apply bg-red-500 text-white ring-red-500;
-        }
-
-        .btn.danger.alt {
-            @apply bg-red-100 text-red-500 ring-red-500;
-        }
-
-        .btn.success {
-            @apply bg-teal-500 text-white ring-teal-500;
-        }
-
-        .btn.success.alt {
-            @apply bg-teal-100 text-teal-500 ring-teal-500;
-        }
-    </style>
 </head>
 <body class="bg-gray-100 font-body flex space-x-20 items-center justify-center h-screen">
     <div class="flex flex-col space-y-4">
         <h3 class="font-bold text-5xl mb-5">Buttons</h3>
         <div class="flex space-x-4">
             <div>
-                <button class="btn">
+                <button class="bg-primary hover:bg-primary-dark text-white font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Primary
                 </button>
             </div>
             <div>
-                <button class="btn alt">
+                <button class="bg-primary-alt hover:bg-primary-alt-dark text-primary font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Primary
                 </button>
             </div>
         </div>
         <div class="flex space-x-4">
             <div>
-                <button class="btn secondary">
+                <button class="bg-secondary hover:bg-secondary-light text-white font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Secondary
                 </button>
             </div>
             <div>
-                <button class="btn secondary alt">
+                <button class="bg-secondary-alt hover:bg-secondary-alt-dark text-secondary font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Secondary
                 </button>
             </div>
         </div>
         <div class="flex space-x-4">
             <div>
-                <button class="btn danger">
+                <button class="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Danger
                 </button>
             </div>
             <div>
-                <button class="btn danger alt">
+                <button class="bg-red-100 hover:bg-red-200 text-secondary font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Danger
                 </button>
             </div>
         </div>
         <div class="flex space-x-4">
             <div>
-                <button class="btn success">
+                <button class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Success
                 </button>
             </div>
             <div>
-                <button class="btn success alt">
+                <button class="bg-teal-100 hover:bg-teal-200 text-secondary font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">
                     Success
                 </button>
             </div>
