@@ -1,9 +1,9 @@
 :root {
     --gradient-circle-left-radius: 72rem;
     --gradient-circle-right-radius: 52rem;
-    --gradient-left: #3590f3;
-    --gradient-right: #5d45c5;
-    --gradient-primary: #006CFF;
+    --gradient-left: #2196f3;
+    --gradient-right: #ea698b;
+    --gradient-primary: #9d4edd;
 }
 
 header nav.opened {
