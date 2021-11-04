@@ -43,3 +43,4 @@ const socialIcons = document.querySelector('#socialIcons')
 const random = Math.floor((Math.random() * socialIcons.childElementCount) + 1)
 const socialButton = socialIcons.children[random - 1]
 socialButton.classList.remove('hidden')
+
