@@ -8,8 +8,10 @@ const { data } = await octokit.rest.repos.getContent({
     repo: 'try'
 })
 
+const excluded = ['.gitignore', 'index']
+
 for (const folder of data) {
-    if (folder.name == '.gitignore') continue
+    if (excluded.includes(folder.name)) continue
 
     const { data:contents } = await axios({
         method: 'GET',
