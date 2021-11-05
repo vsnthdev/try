@@ -1,3 +1,4 @@
+import colors from 'https://cdn.skypack.dev/tailwindcss/colors'
 
 tailwind.config = {
     theme: {
@@ -9,29 +10,17 @@ tailwind.config = {
         },
         extend: {
             colors: {
-                white: '#FFFFFF',
+                gray: colors.blueGray,
+                primary: '#006CFF',
+                'primary-dark': '#005DE0',
+                'primary-alt': '#D6E7FF',
+                'primary-alt-dark': '#C2DBFF',
                 youtube: '#FF0000',
                 discord: '#5662F6',
                 twitter: '#1E95FF',
-                primary: '#adcfff'
             },
-            backgroundImage: {
-                'main-gradient': 'linear-gradient(0deg, rgba(255,255,255,0) 0%, var(--gradient-primary) 75%)'
-            },
-            width: {
-                circle: '42rem'
-            },
-            height: {
-                circle: '42rem'
-            },
-            minWidth: {
-                nav: '12rem'
-            },
-            inset: {
-                nav: '4.5rem'
-            },
-            zIndex: {
-                '-10': '-10',
+            boxShadow: {
+                card: '0px 25px 30px -3px rgba(0, 0, 0, 0.05)'
             }
         }
     }
@@ -41,4 +30,3 @@ const socialIcons = document.querySelector('#socialIcons')
 const random = Math.floor((Math.random() * socialIcons.childElementCount) + 1)
 const socialButton = socialIcons.children[random - 1]
 socialButton.classList.remove('hidden')
-
