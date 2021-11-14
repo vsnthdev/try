@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Cards | Try out — Vasanth Srivatsa</title>
+
+    <link rel="stylesheet" href="/content-cards/fonts.css">
+    <script src="https://cdn-tailwindcss.vercel.app"></script>
+    <script type="module" src="/content-cards/index.js"></script>
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-body font-semibold h-screen select-none">
+    <!-- vertical horizontal switcher -->
+    <div class="fixed flex justify-center pt-8 w-full">
+        <button id="switcher" class="bg-primary hover:bg-primary-dark text-white font-semibold px-4 py-2 rounded-md transition focus:outline-none active:transform-gpu active:scale-95">Horizontal</button>
+    </div>
+
+    <div id="vertical" class="h-full grid place-items-center">
+        <a href="#">
+            <article class="bg-white bg-center bg-cover bg-no-repeat rounded-xl shadow-xl p-8 flex flex-col justify-between w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95" style="background-image: url('https://source.unsplash.com/m_7p45JfXQo');">
+                <div class="text-white">
+                    <span class="text-sm font-black uppercase tracking-widest opacity-30">Linux</span>
+                    <h3 class="text-3xl font-bold mt-2">Reading Experience Filters Concept</h3>
+                </div>
+                <div>
+                    <button class="shadow-md bg-white transition hover:bg-gray-200 font-semibold px-4 py-2 rounded-md focus:outline-none" href="#">Read article</button>
+                </div>
+            </article>
+        </a>
+    </div>
+
+    <div id="horizontal" class="h-full grid place-items-center">
+        <div class="lg:w-full lg:max-w-5xl">
+            <article class="relative bg-white bg-center bg-cover bg-no-repeat rounded-xl shadow-xl p-8 flex flex-col justify-between w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95 lg:w-full lg:flex-row lg:items-center lg:h-auto lg:py-10" style="background-image: url('https://source.unsplash.com/m_7p45JfXQo');">
+                <div class="flex-grow-0 text-white z-10">
+                    <span class="text-sm font-black uppercase tracking-widest opacity-30">Linux</span>
+                    <h3 class="text-3xl font-bold mt-2">Reading Experience Filters Concept</h3>
+                </div>
+                <div class="flex-shrink-0 lg:mt-auto z-10">
+                    <button class="shadow-md bg-white transition hover:bg-gray-200 font-semibold px-4 py-2 rounded-md focus:outline-none" href="#">Read article</button>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script>
+        let horizontal = false
+        document.querySelector('#switcher').onclick = () => {
+            if (horizontal) {
+                horizontal = false
+                document.querySelector('#horizontal').classList.add('hidden')
+                document.querySelector('#vertical').classList.remove('hidden')
+                document.querySelector('#switcher').textContent = 'Horizontal'
+            } else {
+                horizontal = true
+                document.querySelector('#horizontal').classList.remove('hidden')
+                document.querySelector('#vertical').classList.add('hidden')
+                document.querySelector('#switcher').textContent = 'Vertical'
+            }
+        }
+    </script>
+</body>
+</html>
