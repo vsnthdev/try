@@ -10,14 +10,14 @@ const { data } = await octokit.rest.repos.getContent({
 
 const excluded = ['.gitignore', 'index']
 
-const markup = ({title, category}) => `<a href="#">
-<article class="relative bg-white bg-center bg-cover bg-no-repeat rounded-xl shadow-xl p-8 flex flex-col justify-between my-8 w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95 lg:w-full lg:flex-row lg:items-center lg:h-auto lg:py-10" style="background-image: url('https://source.unsplash.com/m_7p45JfXQo');">
+const markup = ({bg, title, category, url}) => `<a href="${url}">
+<article class="relative bg-center bg-cover bg-no-repeat rounded-xl shadow-xl p-8 flex flex-col justify-between my-8 w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95 lg:w-full lg:flex-row lg:items-center lg:h-auto lg:py-10" style="background: #${bg}">
     <div class="flex-grow-0 text-white z-10">
         <span class="text-sm font-black uppercase tracking-widest opacity-30">${category}</span>
         <h3 class="text-3xl font-bold mt-2">${title}</h3>
     </div>
     <div class="flex-shrink-0 lg:mt-auto z-10">
-        <button class="shadow-md bg-white transition hover:bg-gray-200 font-semibold px-4 py-2 rounded-md focus:outline-none" href="#">Explore now</button>
+        <button class="shadow-md bg-white transition hover:bg-gray-200 font-semibold px-4 py-2 rounded-md focus:outline-none">Explore now</button>
     </div>
 </article>
 </a>`
@@ -45,8 +45,12 @@ for (const folder of data) {
     
     const title = safetyCheck(doc.querySelector('meta[name=vsnthdev-try-title]'), 'Title')
     const category = safetyCheck(doc.querySelector('meta[name=vsnthdev-try-category]'), 'Category')
+    const bg = safetyCheck(doc.querySelector('meta[name=vsnthdev-try-bg]'), 'Background')
+
     cards.innerHTML = cards.innerHTML + markup({
+        bg,
         title,
-        category
+        category,
+        url: `/${folder.name}`
     })
 }
