@@ -1,7 +1,3 @@
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-
 header nav.opened {
     transform: translateX(0px);
 }

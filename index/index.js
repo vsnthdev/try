@@ -34,7 +34,7 @@ for (const folder of data) {
     if (excluded.includes(folder.name)) continue
     if (folder.type == 'file') continue
 
-    const { data:contents } = await axios({
+    const { data: contents } = await axios({
         method: 'GET',
         url: `https://raw.githubusercontent.com/vsnthdev/try/main/${folder.name}/index.html`
     })

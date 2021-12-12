@@ -1,5 +1,3 @@
-import colors from 'https://cdn.skypack.dev/tailwindcss/colors'
-
 tailwind.config = {
     theme: {
         darkMode: 'class',
@@ -11,7 +9,6 @@ tailwind.config = {
         },
         extend: {
             colors: {
-                gray: colors.blueGray,
                 primary: '#006cff',
                 'twitter': '#1da1f2',
                 'twitter-dark': '#0D94E7',
