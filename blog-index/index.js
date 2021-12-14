@@ -1,4 +1,4 @@
-import colors from 'https://cdn.skypack.dev/tailwindcss/colors'
+import colors from 'https://cdn.skypack.dev/tailwindcss@^2.2.19/colors?min'
 
 tailwind.config = {
     theme: {
