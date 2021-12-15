@@ -9,13 +9,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="/index/index.js"></script>
     <script type="module" src="/index/tailwind.config.js"></script>
+    
+
+    <!-- importing vyaktitva -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preload" crossorigin="anonymous" href="https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.esm.js" as="script">
     <link rel="stylesheet" href="https://try.vsnth.dev/content-cards/fonts.css">
     <link rel="stylesheet" href="https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.css">
-    <script type="module" src="https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.esm.js"></script>
+    <script type="module" async src="https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.esm.js"></script>
 
     <link rel="stylesheet" href="/index/index.css">
 </head>
-<body class="font-body h-screen select-none">
+<body class="flex flex-col font-body h-screen select-none">
     <!-- header -->
     <v-header brand="Vasanth Srivatsa" theme="default"></v-header>
 
@@ -29,6 +34,6 @@
     </div>
 
     <!-- footer -->
-    <v-footer brand="Vasanth Srivatsa" theme="default"></v-footer>
+    <v-footer brand="Vasanth Srivatsa" theme="default" class="mt-auto"></v-footer>
 </body>
 </html>
