@@ -17,6 +17,9 @@ tailwind.config = {
         extend: {
             boxShadow: {
                 card: '0px 14px 15px -3px rgba(0, 0, 0, 0.05)'
+            },
+            spacing: {
+                108: '28rem'
             }
         }
     }

@@ -1,7 +1,12 @@
 header nav {
-    border-left-width: 2px;
+    z-index: 10;
     border-color: #e2e8f0;
+    border-left-width: 2px;
     box-shadow: -10px 0px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+header div:nth-child(3) {
+    z-index: 20;
 }
 
 @media screen and (min-width: 768px) {
