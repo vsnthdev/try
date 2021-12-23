@@ -1,6 +1,11 @@
 import axios from 'https://cdn.skypack.dev/axios'
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest'
 
+// add the transition class after some time
+setTimeout(() => {
+    document.querySelector('body').classList.add('transition-colors')
+}, 500)
+
 const octokit = new Octokit()
 
 const { data } = await octokit.rest.repos.getContent({
@@ -17,7 +22,7 @@ const markup = ({bg, title, category, url}) => `<a href="${url}">
         <h3 class="text-3xl font-bold mt-2">${title}</h3>
     </div>
     <div class="flex-shrink-0 lg:mt-auto z-10">
-        <button class="shadow-card bg-white transition hover:bg-gray-200 font-semibold px-4 py-2 rounded-md focus:outline-none">Explore now</button>
+        <button class="text-light-900 shadow-card bg-white transition hover:bg-gray-200 font-semibold px-4 py-2 rounded-md focus:outline-none">Explore now</button>
     </div>
 </article>
 </a>`

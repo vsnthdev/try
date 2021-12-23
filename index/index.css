@@ -5,6 +5,10 @@ header nav {
     box-shadow: -10px 0px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
+.dark header nav {
+    border-color: #334155;
+}
+
 header div:nth-child(3) {
     z-index: 20;
 }
