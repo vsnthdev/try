@@ -12,7 +12,7 @@ import path from 'path'
 const project = path.basename(dirname())
 
 export default merge(base, defineConfig({
-    base: project,
+    base: `/${project}/`,
     build: {
         emptyOutDir: true,
         outDir: `../../../dist/${project}`
