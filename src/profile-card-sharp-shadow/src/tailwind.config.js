@@ -1,10 +1,6 @@
-import { setup, strict } from "https://cdn.skypack.dev/twind/shim";
 import colors from 'https://cdn.skypack.dev/tailwindcss@^2.2.19/colors?min'
 
-setup({
-    hash: false,
-    darkMode: false,
-    mode: strict,
+tailwind.config = {
     theme: {
         fontFamily: {
             body: ['Inter', 'sans-serif']
@@ -25,4 +21,4 @@ setup({
                 'linear-gradient(90deg, rgba(235,245,255,1) 0%, rgba(214,235,255,1) 100%)',
         }
     }
-});
+}
