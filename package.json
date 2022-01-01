@@ -1,0 +1,26 @@
+{
+    "name": "try",
+    "description": "Playground where I try & create different components and pages.",
+    "version": "0.0.0",
+    "license": "UNLICENSED",
+    "type": "module",
+    "private": true,
+    "homepage": "https://try.vsnth.dev",
+    "bugs": "https://github.com/vsnthdev/try/issues",
+    "author": {
+        "name": "Vasanth Developer",
+        "email": "vasanth@vasanthdeveloper.com",
+        "url": "https://vsnth.dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vsnthdev/try.git"
+    },
+    "scripts": {
+        "postinstall": "lerna bootstrap"
+    },
+    "devDependencies": {
+        "lerna": "^4.0.0",
+        "vite": "^2.7.10"
+    }
+}
