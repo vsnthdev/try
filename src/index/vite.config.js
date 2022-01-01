@@ -9,6 +9,6 @@ import base from '../../vite.config.js';
 
 export default merge(base, defineConfig({
     build: {
-        outDir: '../dist'
+        outDir: '../../../dist'
     }
 }))

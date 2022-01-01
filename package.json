@@ -19,12 +19,13 @@
     "scripts": {
         "postinstall": "lerna bootstrap",
         "build": "lerna run build",
-        "clean": "lerna run clean"
+        "clean": "rimraf dist"
     },
     "devDependencies": {
         "axios": "^0.24.0",
         "deepmerge": "^4.2.2",
         "lerna": "^4.0.0",
+        "rimraf": "^3.0.2",
         "vite": "^2.7.10"
     }
 }
