@@ -1,9 +1,7 @@
-import { setup, strict } from 'https://cdn.skypack.dev/twind/shim'
-import * as colors from 'https://cdn.skypack.dev/twind/colors'
+import colors from 'https://cdn.skypack.dev/tailwindcss@^2.2.19/colors?min'
 
-setup({
+tailwind.config = {
     darkMode: 'class',
-    mode: strict,
     theme: {
         fontFamily: {
             body: ['Urbanist', 'sans-serif']
@@ -22,4 +20,4 @@ setup({
             },
         }
     }
-})
+}
