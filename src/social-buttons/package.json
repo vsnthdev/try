@@ -1,5 +1,9 @@
 {
     "name": "@try/social-icons",
     "version": "0.0.0",
-    "type": "module"
+    "type": "module",
+    "scripts": {
+        "build": "vite --config vite.config.js build src",
+        "dev": "vite --config vite.config.js src"
+    }
 }
