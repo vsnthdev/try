@@ -1,0 +1,32 @@
+{
+    "name": "try",
+    "description": "Playground where I try & create different components and pages.",
+    "version": "0.0.0",
+    "license": "UNLICENSED",
+    "type": "module",
+    "private": true,
+    "homepage": "https://try.vsnth.dev",
+    "bugs": "https://github.com/vsnthdev/try/issues",
+    "author": {
+        "name": "Vasanth Developer",
+        "email": "vasanth@vasanthdeveloper.com",
+        "url": "https://vsnth.dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vsnthdev/try.git"
+    },
+    "scripts": {
+        "postinstall": "lerna bootstrap",
+        "build": "rimraf dist && lerna run build",
+        "clean": "rimraf dist"
+    },
+    "devDependencies": {
+        "axios": "^0.24.0",
+        "deepmerge": "^4.2.2",
+        "es-dirname": "^0.1.0",
+        "lerna": "^4.0.0",
+        "rimraf": "^3.0.2",
+        "vite": "^2.7.10"
+    }
+}
