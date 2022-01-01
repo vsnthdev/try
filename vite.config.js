@@ -9,7 +9,6 @@ export default defineConfig({
     clearScreen: false,
     publicDir: '../public',
     build: {
-        emptyOutDir: true,
         assetsDir: ''
     },
     server: {

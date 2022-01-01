@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest'
 
-import '../tailwind.config.js';
+import './tailwind.config.js';
 
 // add the transition class after some time
 setTimeout(() => {
