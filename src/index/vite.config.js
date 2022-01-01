@@ -5,7 +5,7 @@
 
 import merge from 'deepmerge';
 import { defineConfig } from 'vite';
-import base from '../vite.config.js';
+import base from '../../vite.config.js';
 
 export default merge(base, defineConfig({
     build: {
