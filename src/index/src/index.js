@@ -9,6 +9,12 @@ setTimeout(() => {
 }, 500)
 
 const main = async () => {
+    // register the service worker
+    const { registerSW } = await import('virtual:pwa-register')
+    registerSW({
+        immediate: true,
+    })
+    
     const octokit = new Octokit()
 
     const { data } = await octokit.rest.repos.getContent({
