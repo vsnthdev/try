@@ -13,10 +13,11 @@ const main = async () => {
 
     const { data } = await octokit.rest.repos.getContent({
         owner: 'vsnthdev',
-        repo: 'try'
+        repo: 'try',
+        path: '/src'
     })
 
-    const excluded = ['.gitignore', 'index']
+    const hidden = ['index']
 
     const markup = ({bg, title, category, url}) => `<a href="${url}">
     <article class="relative bg-center bg-cover bg-no-repeat rounded-xl shadow-card p-8 flex flex-col justify-between my-4 w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95 lg:my-12 lg:w-full lg:flex-row lg:items-center lg:h-auto lg:py-10" style="background: #${bg}">
@@ -39,12 +40,12 @@ const main = async () => {
     }
 
     for (const folder of data) {
-        if (excluded.includes(folder.name)) continue
+        if (hidden.includes(folder.name)) continue
         if (folder.type == 'file') continue
 
         const { data: contents } = await axios({
             method: 'GET',
-            url: `https://raw.githubusercontent.com/vsnthdev/try/main/${folder.name}/index.html`
+            url: `https://raw.githubusercontent.com/vsnthdev/try/main/src/${folder.name}/src/index.html`
         })
 
         const parser = new DOMParser()
