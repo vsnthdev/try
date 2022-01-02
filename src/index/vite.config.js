@@ -33,6 +33,7 @@ VitePWA({
         name: 'Try Outs',
         short_name: 'Try Outs',
         orientation: 'portrait-primary',
+        id: 'dev.vsnth.try',
         theme_color: '#FFFFFF',
         description: 'Playground where I try & create different components and pages.',
         icons: [
