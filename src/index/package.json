@@ -8,6 +8,10 @@
     },
     "devDependencies": {
         "rollup-plugin-copy": "^3.4.0",
-        "vite-plugin-pwa": "^0.11.12"
+        "vite-plugin-pwa": "^0.11.12",
+        "workbox-expiration": "^6.4.2",
+        "workbox-precaching": "^6.4.2",
+        "workbox-routing": "^6.4.2",
+        "workbox-strategies": "^6.4.2"
     }
 }

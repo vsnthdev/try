@@ -29,6 +29,12 @@ const config = merge(base, defineConfig({
 config.plugins.push(
     // configure and setup this website as a Progressive Web App
 VitePWA({
+    strategies: 'injectManifest',
+    srcDir: 'assets/js',
+    filename: 'sw.js',
+    injectManifest: {
+        globPatterns: ['./*.{js,css,html,png}']
+    },
     manifest: {
         name: 'Try Outs',
         short_name: 'Try Outs',
@@ -44,54 +50,6 @@ VitePWA({
             }
         ]
     },
-    workbox: {
-        runtimeCaching: [
-            {
-                urlPattern: /.+try.vsnth.dev.+/,
-                handler: 'CacheFirst',
-                options: {
-                    cacheName: 'try',
-                    expiration: {
-                        // an hour
-                        maxAgeSeconds: 3600
-                    }
-                }
-            },
-            {
-                urlPattern: /.+raw.githubusercontent.com.+/,
-                handler: 'CacheFirst',
-                options: {
-                    cacheName: 'github-api',
-                    expiration: {
-                        // an hour
-                        maxAgeSeconds: 3600
-                    }
-                }
-            },
-            {
-                urlPattern: /.+vyaktitva.vercel.app.+/,
-                handler: 'CacheFirst',
-                options: {
-                    cacheName: 'fonts',
-                    expiration: {
-                        // one week
-                        maxAgeSeconds: 3600 * 168
-                    }
-                }
-            },
-            {
-                urlPattern: /.+unpkg.com.+|.+cdn.skypack.dev.+|.+cdn.tailwindcss.com.+/,
-                handler: 'CacheFirst',
-                options: {
-                    cacheName: 'lib',
-                    expiration: {
-                        // a day
-                        maxAgeSeconds: 3600 * 24
-                    }
-                }
-            }
-        ]
-    }
 })
 )
 
