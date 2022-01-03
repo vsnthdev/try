@@ -1,4 +1,4 @@
-import { precacheAndRoute } from 'workbox-precaching';
+import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing'
 import { CacheFirst } from 'workbox-strategies'
 import { ExpirationPlugin } from 'workbox-expiration';
@@ -24,3 +24,14 @@ registerRoute(req => ['api.github.com', 'raw.githubusercontent.com'].includes(re
         })
     ]
 }))
+
+
+// remove old preCache done by Vite.js & workbox
+cleanupOutdatedCaches()
+
+// manually remove old caches
+const obsoleteCaches = ['fonts', 'try', 'github-api']
+
+for (const cacheName of obsoleteCaches) {
+    caches.delete(cacheName)
+}
