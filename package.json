@@ -18,7 +18,7 @@
     },
     "scripts": {
         "postinstall": "lerna bootstrap",
-        "build": "rimraf dist && lerna run build",
+        "build": "rimraf dist && lerna run --parallel build",
         "clean": "rimraf dist",
         "preview": "npm run build && sirv dist --port 3000"
     },
