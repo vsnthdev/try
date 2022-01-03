@@ -1,10 +1,12 @@
+/* global tailwind */
+
 tailwind.config = {
     theme: {
         fontFamily: {
-            body: ['Basically A Sans Serif', 'sans-serif']
+            body: ['Basically A Sans Serif', 'sans-serif'],
         },
         container: {
-            center: true
+            center: true,
         },
         extend: {
             colors: {
@@ -15,8 +17,8 @@ tailwind.config = {
                 secondary: '#0d0106',
                 'secondary-light': '#333333',
                 'secondary-alt': '#E2E8F0',
-                'secondary-alt-dark': '#D7DFEA'
-            }
-        }
-    }
+                'secondary-alt-dark': '#D7DFEA',
+            },
+        },
+    },
 }

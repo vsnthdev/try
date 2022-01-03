@@ -1,12 +1,14 @@
+/* global tailwind */
+
 import colors from 'https://cdn.skypack.dev/tailwindcss@^2.2.19/colors?min'
 
 tailwind.config = {
     theme: {
         fontFamily: {
-            body: ['Basically A Sans Serif', 'sans-serif']
+            body: ['Basically A Sans Serif', 'sans-serif'],
         },
         container: {
-            center: true
+            center: true,
         },
         extend: {
             colors: {
@@ -20,13 +22,13 @@ tailwind.config = {
                 twitter: '#1E95FF',
             },
             boxShadow: {
-                card: '0px 25px 30px -3px rgba(0, 0, 0, 0.05)'
-            }
-        }
-    }
+                card: '0px 25px 30px -3px rgba(0, 0, 0, 0.05)',
+            },
+        },
+    },
 }
 
 const socialIcons = document.querySelector('#socialIcons')
-const random = Math.floor((Math.random() * socialIcons.childElementCount) + 1)
+const random = Math.floor(Math.random() * socialIcons.childElementCount + 1)
 const socialButton = socialIcons.children[random - 1]
 socialButton.classList.remove('hidden')

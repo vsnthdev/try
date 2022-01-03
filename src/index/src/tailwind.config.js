@@ -1,10 +1,12 @@
+/* global tailwind */
+
 import colors from 'https://cdn.skypack.dev/tailwindcss/colors'
 
 tailwind.config = {
     darkMode: 'class',
     theme: {
         fontFamily: {
-            body: ['Basically A Sans Serif', 'sans-serif']
+            body: ['Basically A Sans Serif', 'sans-serif'],
         },
         colors: {
             light: colors.slate,
@@ -12,16 +14,15 @@ tailwind.config = {
             transparent: 'transparent',
             inherit: 'inherit',
             white: '#FFFFFF',
-            brand: '#006cff'
+            brand: '#006cff',
         },
         extend: {
             boxShadow: {
-                card: '0px 14px 15px -3px rgba(0, 0, 0, 0.05)'
+                card: '0px 14px 15px -3px rgba(0, 0, 0, 0.05)',
             },
             spacing: {
-                108: '28rem'
-            }
-        }
-    }
+                108: '28rem',
+            },
+        },
+    },
 }
-

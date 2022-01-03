@@ -1,12 +1,14 @@
+/* global tailwind */
+
 import colors from 'https://cdn.skypack.dev/tailwindcss@^2.2.19/colors?min'
 
 tailwind.config = {
     theme: {
         fontFamily: {
-            body: ['Poppins', 'sans-serif']
+            body: ['Poppins', 'sans-serif'],
         },
         container: {
-            center: true
+            center: true,
         },
         extend: {
             colors: {
@@ -16,12 +18,11 @@ tailwind.config = {
                 body: '#FFF0DF',
                 'body-dark': '#FFC685',
                 primary: '#EF798A',
-                'primary-dark': '#EC5B70'
+                'primary-dark': '#EC5B70',
             },
             boxShadow: {
-                avatar: '10px 10px 0px 0px #EF798A'
+                avatar: '10px 10px 0px 0px #EF798A',
             },
-        }
-    }
+        },
+    },
 }
-

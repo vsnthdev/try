@@ -23,10 +23,17 @@
         "preview": "npm run build && sirv dist --port 3000"
     },
     "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@babel/eslint-parser": "^7.16.5",
+        "@babel/plugin-syntax-top-level-await": "^7.14.5",
         "axios": "^0.24.0",
         "deepmerge": "^4.2.2",
         "es-dirname": "^0.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
         "lerna": "^4.0.0",
+        "prettier": "^2.5.1",
         "rimraf": "^3.0.2",
         "sirv-cli": "^2.0.1",
         "vite": "^2.7.10"

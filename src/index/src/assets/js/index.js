@@ -1,7 +1,7 @@
+import '../../tailwind.config.js'
+
 import axios from 'axios'
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest'
-
-import '../../tailwind.config.js';
 
 // add the transition class after some time
 setTimeout(() => {
@@ -14,18 +14,18 @@ const main = async () => {
     registerSW({
         immediate: true,
     })
-    
+
     const octokit = new Octokit()
 
     const { data } = await octokit.rest.repos.getContent({
         owner: 'vsnthdev',
         repo: 'try',
-        path: '/src'
+        path: '/src',
     })
 
     const hidden = ['index']
 
-    const markup = ({bg, title, category, url}) => `<a href="${url}">
+    const markup = ({ bg, title, category, url }) => `<a href="${url}">
     <article class="relative bg-center bg-cover bg-no-repeat rounded-xl shadow-card p-8 flex flex-col justify-between my-4 w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95 lg:my-12 lg:w-full lg:flex-row lg:items-center lg:h-auto lg:py-10" style="background: #${bg}">
         <div class="flex-grow-0 text-white z-10">
             <span class="text-sm font-black uppercase tracking-widest opacity-30">${category}</span>
@@ -51,23 +51,25 @@ const main = async () => {
 
         const { data: contents } = await axios({
             method: 'GET',
-            url: `https://raw.githubusercontent.com/vsnthdev/try/main/src/${folder.name}/src/index.html`
+            url: `https://raw.githubusercontent.com/vsnthdev/try/main/src/${folder.name}/src/index.html`,
         })
 
         const parser = new DOMParser()
         const doc = parser.parseFromString(contents, 'text/html')
         const cards = document.querySelector('#cards')
-        
+
         const title = safetyCheck(doc.querySelector('meta[name=vsnthdev-try-title]'), 'Title')
         const category = safetyCheck(doc.querySelector('meta[name=vsnthdev-try-category]'), 'Category')
         const bg = safetyCheck(doc.querySelector('meta[name=vsnthdev-try-bg]'), 'Background')
 
-        cards.innerHTML = cards.innerHTML + markup({
-            bg,
-            title,
-            category,
-            url: `/${folder.name}`
-        })
+        cards.innerHTML =
+            cards.innerHTML +
+            markup({
+                bg,
+                title,
+                category,
+                url: `/${folder.name}`,
+            })
     }
 }
 
