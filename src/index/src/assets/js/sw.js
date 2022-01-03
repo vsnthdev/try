@@ -6,7 +6,7 @@ import { ExpirationPlugin } from 'workbox-expiration';
 // pre-cache assets built using Vite.js
 precacheAndRoute(self.__WB_MANIFEST)
 
-const libHosts = ['cdn.tailwindcss.com', 'vyaktitva.vercel.app', 'cdn.skypack.dev', 'unpkg.com']
+const libHosts = ['cdn.tailwindcss.com', 'tailwindcss.com', 'vyaktitva.vercel.app', 'cdn.skypack.dev', 'unpkg.com']
 registerRoute(req => libHosts.includes(req.url.host), new CacheFirst({
     cacheName: 'lib',
     plugins: [
