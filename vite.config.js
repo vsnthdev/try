@@ -5,12 +5,14 @@
  */
 
 import { defineConfig } from 'vite'
+import { minifyHtml } from 'vite-plugin-html'
 
-export default env =>
+export default ({ mode }) =>
     defineConfig({
         clearScreen: false,
         publicDir: '../public',
         build: {
+            minify: 'esbuild',
             assetsDir: '',
         },
         server: {
@@ -18,5 +20,13 @@ export default env =>
                 strict: false,
             },
         },
-        plugins: [],
+        plugins: [
+            // minify html during production
+            mode == 'production'
+                ? minifyHtml({
+                      minifyCSS: true,
+                      minifyJS: true,
+                  })
+                : null,
+        ],
     })
