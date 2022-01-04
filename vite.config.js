@@ -6,15 +6,17 @@
 
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-    clearScreen: false,
-    publicDir: '../public',
-    build: {
-        assetsDir: '',
-    },
-    server: {
-        fs: {
-            strict: false,
+export default env =>
+    defineConfig({
+        clearScreen: false,
+        publicDir: '../public',
+        build: {
+            assetsDir: '',
         },
-    },
-})
+        server: {
+            fs: {
+                strict: false,
+            },
+        },
+        plugins: [],
+    })

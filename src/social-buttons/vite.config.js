@@ -4,22 +4,15 @@
  *  Created On 02 January 2022
  */
 
-import merge from 'deepmerge'
 import dirname from 'es-dirname'
 import path from 'path'
-import { defineConfig } from 'vite'
 
-import base from '../../vite.config.js'
+import getConfig from '../../vite.config.js'
+import { setOutput } from '../index/vite.config.js'
 
-const project = path.basename(dirname())
+export default env => {
+    const config = getConfig(env)
+    setOutput(config, path.basename(dirname()))
 
-export default merge(
-    base,
-    defineConfig({
-        base: `/${project}/`,
-        build: {
-            emptyOutDir: true,
-            outDir: `../../../dist/${project}`,
-        },
-    }),
-)
+    return config
+}

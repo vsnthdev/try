@@ -11,6 +11,12 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 import base from '../../vite.config.js'
 
+export const setOutput = (config, projectName) => {
+    config.base = `/${projectName}/`
+    config.build.emptyOutDir = true
+    config.build.outDir = `../../../dist/${projectName}`
+}
+
 const config = merge(
     base,
     defineConfig({
