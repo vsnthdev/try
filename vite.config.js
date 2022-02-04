@@ -5,9 +5,9 @@
  */
 
 import { defineConfig } from 'vite'
-import { minifyHtml } from 'vite-plugin-html'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
-export default ({ mode }) =>
+export default () =>
     defineConfig({
         clearScreen: false,
         publicDir: '../public',
@@ -22,11 +22,12 @@ export default ({ mode }) =>
         },
         plugins: [
             // minify html during production
-            mode == 'production'
-                ? minifyHtml({
-                      minifyCSS: true,
-                      minifyJS: true,
-                  })
-                : null,
+            createHtmlPlugin({
+                minify: {
+                    minifyCSS: true,
+                    minifyJS: true,
+                    minifyURLs: true,
+                },
+            }),
         ],
     })
