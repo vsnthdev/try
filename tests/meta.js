@@ -22,6 +22,12 @@ for (const file of files) {
     const html = await fs.readFile(file, 'utf-8')
 
     const noIndex = !html.includes('<meta name="robots" content="noindex" />')
+    const metaTitle = !html.includes('vsnthdev-try-title')
+    const metaCategory = !html.includes('vsnthdev-try-category')
+    const metaBg = !html.includes('vsnthdev-try-bg')
 
-    if (noIndex) logger.error(`"noindex" not found in ${getFilePath(file)}`, 2)
+    if (noIndex) logger.error(`"noindex" not found in ${getFilePath(file)}`)
+    if (metaTitle) logger.error(`No "vsnthdev-try-title" meta attribute was found in ${getFilePath(file)}`)
+    if (metaCategory) logger.error(`No "vsnthdev-try-category" meta attribute was found in ${getFilePath(file)}`)
+    if (metaBg) logger.error(`No "vsnthdev-try-bg" meta attribute was found in ${getFilePath(file)}`)
 }
