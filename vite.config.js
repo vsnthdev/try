@@ -15,7 +15,7 @@ export default () =>
         build: {
             minify: 'esbuild',
             assetsDir: '',
-            outDir: '../../../dist',
+            outDir: '../dist',
         },
         server: {
             fs: {
@@ -34,7 +34,7 @@ export default () =>
 
             VitePWA({
                 strategies: 'injectManifest',
-                srcDir: 'assets/js',
+                srcDir: 'assets/scripts',
                 filename: 'sw.js',
                 injectManifest: {
                     globPatterns: ['./*.{js,css,html,png}'],

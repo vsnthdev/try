@@ -1,4 +1,4 @@
-import '../../tailwind.config.js'
+import './tailwind.web.js'
 
 import axios from 'axios'
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest'
