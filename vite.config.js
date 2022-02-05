@@ -6,7 +6,6 @@
 
 import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
-import { VitePWA } from 'vite-plugin-pwa'
 
 export default () =>
     defineConfig({
@@ -29,30 +28,6 @@ export default () =>
                     minifyCSS: true,
                     minifyJS: true,
                     minifyURLs: true,
-                },
-            }),
-
-            VitePWA({
-                strategies: 'injectManifest',
-                srcDir: 'assets/scripts',
-                filename: 'sw.js',
-                injectManifest: {
-                    globPatterns: ['./*.{js,css,html,png}'],
-                },
-                manifest: {
-                    name: 'Try Outs',
-                    short_name: 'Try Outs',
-                    orientation: 'portrait-primary',
-                    id: 'dev.vsnth.try',
-                    theme_color: '#FFFFFF',
-                    description: 'Playground where I try & create different components and pages.',
-                    icons: [
-                        {
-                            src: 'site_icon.png',
-                            sizes: '540x540',
-                            type: 'image/png',
-                        },
-                    ],
                 },
             }),
         ],
