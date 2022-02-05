@@ -21,10 +21,13 @@
         "@babel/core": "^7.17.0",
         "@babel/eslint-parser": "^7.17.0",
         "@babel/plugin-syntax-top-level-await": "^7.14.5",
+        "chalk": "^5.0.0",
         "es-dirname": "^0.1.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "glob": "^7.2.0",
+        "itivrutaha": "^2.0.12",
         "prettier": "^2.5.1"
     }
 }
