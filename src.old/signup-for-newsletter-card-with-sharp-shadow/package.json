@@ -1,9 +1,0 @@
-{
-    "name": "@try/signup-for-newsletter-card-with-sharp-shadow",
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "build": "vite --config vite.config.js build src",
-        "dev": "vite --config vite.config.js src"
-    }
-}
