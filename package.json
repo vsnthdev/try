@@ -17,31 +17,19 @@
         "url": "https://github.com/vsnthdev/try.git"
     },
     "scripts": {
-        "postinstall": "lerna bootstrap",
-        "build": "rimraf dist && lerna run --parallel build",
-        "clean": "rimraf dist",
-        "preview": "npm run build && sirv dist --port 3000"
+        "test": "node tests/meta.js"
     },
     "devDependencies": {
         "@babel/core": "^7.17.0",
         "@babel/eslint-parser": "^7.17.0",
         "@babel/plugin-syntax-top-level-await": "^7.14.5",
-        "axios": "^0.25.0",
+        "chalk": "^5.0.0",
         "es-dirname": "^0.1.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
-        "lerna": "^4.0.0",
-        "prettier": "^2.5.1",
-        "rimraf": "^3.0.2",
-        "rollup-plugin-copy": "^3.4.0",
-        "sirv-cli": "^2.0.2",
-        "vite": "^2.7.13",
-        "vite-plugin-html": "^3.0.3",
-        "vite-plugin-pwa": "^0.11.13",
-        "workbox-expiration": "^6.4.2",
-        "workbox-precaching": "^6.4.2",
-        "workbox-routing": "^6.4.2",
-        "workbox-strategies": "^6.4.2"
+        "glob": "^7.2.0",
+        "itivrutaha": "^2.0.12",
+        "prettier": "^2.5.1"
     }
 }
