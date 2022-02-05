@@ -23,7 +23,7 @@ const main = async () => {
 
     const hidden = ['index']
 
-    const markup = ({ bg, title, category, url }) => `<a href="/pages/${url}">
+    const markup = ({ bg, title, category, url }) => `<a href="/pages${url}">
     <article class="relative bg-center bg-cover bg-no-repeat rounded-xl shadow-card p-8 flex flex-col justify-between my-4 w-80 h-108 transition focus:outline-none active:transform-gpu active:scale-95 lg:my-12 lg:w-full lg:flex-row lg:items-center lg:h-auto lg:py-10" style="background: #${bg}">
         <div class="flex-grow-0 text-white z-10">
             <span class="text-sm font-black uppercase tracking-widest opacity-30">${category}</span>
