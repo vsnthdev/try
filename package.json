@@ -18,8 +18,9 @@
     },
     "scripts": {
         "postinstall": "lerna bootstrap",
-        "build": "rimraf dist && lerna run --parallel build",
+        "build": "vite --config vite.config.js build src/index/src",
         "clean": "rimraf dist",
+        "dev": "vite --config vite.config.js src/index/src",
         "preview": "npm run build && sirv dist --port 3000"
     },
     "devDependencies": {
