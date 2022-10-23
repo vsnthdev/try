@@ -6,7 +6,7 @@
 const vyaktitva = require('vyaktitva/tailwind.config.cjs')
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
     darkMode: vyaktitva.darkMode,
     content: [
         "./src/styles/safeList.txt",

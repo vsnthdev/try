@@ -1,6 +1,6 @@
 /*
  *  PostCSS config file for try project.
- *  Created On 23 October 2022
+ *  Created On 24 October 2022
  */
 
 module.exports = {
