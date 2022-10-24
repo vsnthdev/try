@@ -49,6 +49,7 @@ const Index: NextPage = ({ blitz }: InferGetStaticPropsType<typeof getStaticProp
         {/* page SEO */}
         <NextSeo
             title={`Try outs - Vasanth Srivatsa`}
+            description='Playground where I 🥇 practice, ⚗️ experiment & ✨ create different components and pages.'
         />
 
         {/* page container */}
@@ -64,8 +65,8 @@ const Index: NextPage = ({ blitz }: InferGetStaticPropsType<typeof getStaticProp
                 </div>
 
                 {/* cards for different elements */}
-                <div>
-                    {blitz.map((stack: any) => <article className='bg-white rounded-xl shadow-2xl shadow-black/[0.1] p-8 flex flex-col justify-between md:flex-row focus:outline-none dark:bg-slate-800'>
+                <div className='pb-14'>
+                    {blitz.map((stack: any) => <article key={stack.stackBlitzId} className='bg-white rounded-xl shadow-2xl shadow-black/[0.1] p-8 flex flex-col justify-between md:flex-row focus:outline-none dark:bg-slate-800'>
                     <div>
                         <span className='text-sm font-black uppercase tracking-widest opacity-30'>{stack.type}</span>
                         <h3 className='text-3xl font-semibold mt-2'>{stack.title}</h3>

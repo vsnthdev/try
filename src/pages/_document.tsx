@@ -17,11 +17,11 @@ declare global {
 
 export default () => <Html className='h-full'>
     <Head>
-         {/* theme color */}
-         <meta name="theme-color" content="#ffffff" />
+        {/* theme color */}
+        <meta name="theme-color" content="#ffffff" />
 
         {/* site icon */}
-        <link rel="icon" type="image/png" sizes="any" href="https://try.vsnth.dev/assets/img/site_icon.png" />
+        <link rel="icon" type="image/png" sizes="any" href="/assets/img/site_icon.png" />
 
         {/* vyaktitva */}
         <script type="module" src="https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.esm.js"></script>
