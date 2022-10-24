@@ -81,7 +81,7 @@ const Index: NextPage = ({ blitz }: InferGetStaticPropsType<typeof getStaticProp
                 </div>
 
                 {/* cards for different elements */}
-                <div className='pb-14'>
+                <div className='flex flex-col space-y-12 pb-14 md:pb-24 lg:pb-32'>
                     {blitz.map((stack: any) => <article key={stack.stackBlitzId} className='bg-white rounded-xl shadow-2xl shadow-black/[0.1] p-8 flex flex-col justify-between md:flex-row focus:outline-none dark:bg-slate-800'>
                     <div>
                         <span className='text-sm font-black uppercase tracking-widest opacity-30'>{stack.type}</span>
