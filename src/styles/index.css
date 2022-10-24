@@ -17,12 +17,6 @@
     width: 100%;
 }
 
-/* hotfix for footer padding */
-/* todo: fix it in next version of vyaktitva */
-v-footer footer .v-container {
-    @apply px-7;
-}
-
 /* hotfix for nav background missing on mobile */
 v-header header nav {
     background-color: white !important;
