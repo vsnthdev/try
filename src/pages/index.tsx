@@ -3,6 +3,7 @@
  *  Created On 24 October 2022
  */
 
+import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import { camelCase } from 'change-case'
 import { Client } from '@notionhq/client'
@@ -45,6 +46,21 @@ export const getStaticProps = async () => {
 }
 
 const Index: NextPage = ({ blitz }: InferGetStaticPropsType<typeof getStaticProps>) =>  {
+    useEffect(() => {
+        // setting light mode initially
+        if (window.matchMedia('(prefers-color-scheme: light)').matches)
+        ['dark', 'v-dark'].forEach(cls => document.querySelector('html').classList.remove(cls))
+        
+        // listening for theme changes
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+            if (event.matches) {
+                ['dark', 'v-dark'].forEach(cls => document.querySelector('html').classList.remove(cls))
+            } else {
+                ['dark', 'v-dark'].forEach(cls => document.querySelector('html').classList.add(cls))
+            }
+        })
+    })
+
     return <>
         {/* page SEO */}
         <NextSeo

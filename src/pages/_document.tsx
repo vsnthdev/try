@@ -15,7 +15,7 @@ declare global {
     }
 }
 
-export default () => <Html className='h-full'>
+export default () => <Html className='h-full dark v-dark'>
     <Head>
         {/* theme color */}
         <meta name="theme-color" content="#ffffff" />
