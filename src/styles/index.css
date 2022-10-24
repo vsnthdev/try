@@ -22,8 +22,12 @@ v-header header nav {
     background-color: white !important;
 }
 
+.v-dark header nav {
+    background-color: rgb(30, 41, 59) !important;
+}
+
 @media screen and (min-width: theme('screens.md')) {
-    v-header header nav {
+    v-header header nav, .dark v-header header nav {
         background-color: transparent !important;
     }
 }
