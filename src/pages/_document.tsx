@@ -38,5 +38,8 @@ export default () => <Html className='h-full dark v-dark'>
 
         {/* additional scripts to be injected by Next.js */}
         <NextScript/>
+
+        {/* Microanalytics tracking code */}
+        <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
     </body>
 </Html>
