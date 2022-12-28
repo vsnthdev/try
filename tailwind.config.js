@@ -7,15 +7,11 @@ const vyaktitva = require('vyaktitva/tailwind.config.cjs')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: vyaktitva.darkMode,
     content: [
         "./src/styles/safeList.txt",
         "./src/pages/**/*.{ts,tsx,svg}",
         "./src/sections/**/*.{ts,tsx,svg}",
-        "./src/components/**/*.{ts,tsx,svg}",
+        "node_modules/vyaktitva/**/*.{js,ts,jsx,tsx}",
     ],
-    theme: {
-        fontFamily: vyaktitva.theme.fontFamily,
-        extend: vyaktitva.theme.extend
-    }
+    theme: vyaktitva.theme
 }

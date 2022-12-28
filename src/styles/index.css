@@ -3,8 +3,6 @@
  *  Created On 24 October 2022
  */
 
-@import url('https://vyaktitva.vercel.app/assets/css/fonts.css');
-
 /* TailwindCSS */
 @tailwind base;
 @tailwind components;
@@ -17,17 +15,17 @@
     width: 100%;
 }
 
-/* hotfix for nav background missing on mobile */
-v-header header nav {
-    background-color: white !important;
-}
+/* additional base customizations */
+@layer base {
+    :host {
+        display: block;
+    }
 
-.v-dark header nav {
-    background-color: rgb(30, 41, 59) !important;
-}
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
 
-@media screen and (min-width: theme('screens.md')) {
-    v-header header nav, .dark v-header header nav {
-        background-color: transparent !important;
+    *::-webkit-scrollbar {
+        display: none;
     }
 }

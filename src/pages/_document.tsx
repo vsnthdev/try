@@ -8,38 +8,32 @@ import { Html, Head, Main, NextScript } from 'next/document'
 declare global {
     namespace JSX {
         interface IntrinsicElements {
-            'v-header': any
             'v-footer': any
             'v-sub-header': any
         }
     }
 }
 
-export default () => <Html className='h-full dark v-dark'>
+export default () => <Html className='h-full v-dark'>
     <Head>
-        {/* theme color */}
-        <meta name="theme-color" content="#ffffff" />
-
         {/* site icon */}
-        <link rel="icon" type="image/png" sizes="any" href="/assets/img/site_icon.png" />
+        <link rel='icon' type='image/png' sizes='any' href='/assets/img/site_icon.png' />
 
         {/* vyaktitva */}
-        <script type="module" src="https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.esm.js"></script>
+        <script type='module' src='https://unpkg.com/vyaktitva/dist/vyaktitva/vyaktitva.esm.js'></script>
+        <link rel='stylesheet' href='https://vyaktitva.vercel.app/assets/css/fonts.css' />
     </Head>
-    <body className='h-full bg-slate-100 font-medium text-slate-700 flex flex-col dark:bg-slate-900 dark:text-white selection:bg-sky-400/20'>
-        {/* the header */}
-        <v-header brand="Vasanth Srivatsa" />
-
+    <body className='h-full flex flex-col text-white bg-slate-1000 bg-dots bg-size-dots'>
         {/* page specific content */}
         <Main />
 
         {/* the footer */}
-        <v-footer brand="Vasanth Srivatsa" class="mt-auto" />
+        <v-footer brand='Vasanth Srivatsa' class='mt-auto' />
 
         {/* additional scripts to be injected by Next.js */}
-        <NextScript/>
+        <NextScript />
 
         {/* Microanalytics tracking code */}
-        <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+        <script data-host='https://microanalytics.io' data-dnt='false' src='https://microanalytics.io/js/script.js' id='ZwSg9rf6GA' async defer></script>
     </body>
 </Html>
