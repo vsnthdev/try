@@ -60,7 +60,7 @@ const Index: NextPage = ({ blitz }: InferGetStaticPropsType<typeof getStaticProp
         <div className='container mx-auto'>
             <div className='w-full max-w-5xl mx-auto px-7'>
                 {/* page title */}
-                <div className='select-none pt-10 pb-10 px-3 md:pt-14 md:pb-14 lg:pt-20 lg:pb-14 xl:py-24 xl:px-0'>
+                <div className='select-none pt-10 pb-10 px-3 md:pt-14 md:pb-14 lg:pt-20 lg:pb-14 xl:pt-10 xl:pb-20 xl:px-0'>
                     <h1 className='leading-normal text-center text-3xl font-semibold sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal'>
                         <span className='text-slate-500 xl:text-4xl'>Playground where I </span><br className='hidden md:inline' />
                         <span className='font-bold'>🥇 practice, ⚗️ experiment & ✨ create </span><br className='hidden lg:inline' />
