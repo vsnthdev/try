@@ -5,9 +5,6 @@
     "license": "Zlib",
     "private": true,
     "homepage": "https://try.vsnth.dev",
-    "engines": {
-        "node": "16.x"
-    },
     "author": {
         "name": "Vasanth Developer",
         "email": "vasanth@vasanthdeveloper.com",
