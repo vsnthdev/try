@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Startup waitlist page in Tailwind CSS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.web.js"></script>
+
+    <!-- additional styles -->
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+    </style>
+</head>
+
+<body class="
+            bg-background bg-blend-screen
+            text-white
+            flex flex-col
+            selection:bg-black/30
+        ">
+    <!-- container -->
+    <div class="
+                container
+                min-h-screen
+                mx-auto
+                px-8
+                flex flex-col
+                items-center
+                justify-center
+                space-y-10
+                lg:flex-row lg:px-0 lg:space-x-8 lg:pb-10
+                xl:space-x-24
+            ">
+        <!-- top/left section -->
+        <div class="flex flex-col space-y-2">
+            <!-- todo: icon -->
+
+            <!-- page title -->
+            <h1 class="font-bold text-4xl lg:text-5xl">
+                Join the waitlist
+            </h1>
+
+            <!-- page description -->
+            <p class="opacity-75 text-xl max-w-md lg:text-2xl">
+                Join the waitlist and we'll contact you for access.
+            </p>
+        </div>
+
+        <!-- bottom/right section -->
+        <div class="relative w-full max-w-md lg:max-w-lg">
+            <!-- card -->
+            <div class="
+                        text-black
+                        w-full
+                        bg-white
+                        flex flex-col
+                        items-center
+                        px-8
+                        py-10
+                        rounded-2xl
+                        z-10
+                        shadow-2xl shadow-black/10
+                        md:px-14
+                        lg:py-16
+                        selection:bg-black selection:text-white
+                    ">
+                <h3 class="font-bold text-3xl mb-10 lg:text-4xl">
+                    Get early access
+                </h3>
+                <form class="flex flex-col items-center w-full space-y-8 mb-8" onsubmit="return false">
+                    <div class="flex flex-col space-y-4 w-full font-semibold">
+                        <input type="text" placeholder="Name" class="
+                                    transition-colors
+                                    w-full
+                                    bg-slate-100
+                                    px-5
+                                    py-3
+                                    rounded-lg
+                                    border-[3px] border-slate-200
+                                    focus:outline-none focus:border-black
+                                " />
+                        <input type="text" placeholder="Email" class="
+                                    transition-colors
+                                    w-full
+                                    bg-slate-100
+                                    px-5
+                                    py-3
+                                    rounded-lg
+                                    border-[3px] border-slate-200
+                                    focus:outline-none focus:border-black
+                                " />
+                    </div>
+                    <button type="submit" class="
+                                transition-all
+                                flex
+                                items-center
+                                justify-center
+                                space-x-1
+                                px-5
+                                py-3
+                                bg-black
+                                text-white
+                                rounded-lg
+                                w-full
+                                ring-transparent ring-offset-4 ring
+                                active:ring-black
+                                hover:bg-neutral-800
+                            ">
+                        <span>Join waitlist</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </form>
+                <p class="text-slate-500">
+                    We'll get in touch with you
+                    <span class="font-bold">soon</span>.
+                </p>
+            </div>
+
+            <!-- background elements -->
+            <div>
+                <div class="
+                            absolute
+                            -z-10
+                            -top-20
+                            -right-20
+                            aspect-square
+                            w-52
+                            rounded-full
+                            bg-[#ffcdb2]
+                            blur-3xl
+                        "></div>
+                <div class="
+                            absolute
+                            -z-10
+                            -bottom-28
+                            -left-32
+                            aspect-square
+                            w-80
+                            rounded-full
+                            bg-[#ffcdb2]
+                            blur-3xl
+                        "></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
