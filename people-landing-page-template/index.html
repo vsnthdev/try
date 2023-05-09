@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.web.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap">
+</head>
+
+<body class="flex flex-col h-full bg-slate-50 selection:bg-sky-200">
+    <!-- header -->
+    <header class="flex items-center justify-center py-8">
+        <div class="container flex items-center justify-between">
+            <!-- left side -->
+            <div class="flex space-x-8 items-center justify-center">
+                <!-- logo -->
+                <div class="flex space-x-1 font-semibold items-center text-xl">
+                    <i icon-name="globe-2" class="aspect-square w-8"></i>
+                    <h4>Social Sphere</h4>
+                </div>
+
+                <!-- navigation -->
+                <nav class="flex space-x-4 font-medium">
+                    <a href="#">Home</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Developers</a>
+                    <a href="#">About</a>
+                </nav>
+            </div>
+
+            <!-- right side -->
+            <div class="flex items-center">
+                <!-- logout btn -->
+                <a href="#"
+                    class="inline-flex text-sm select-none space-x-2 py-1.5 px-3.5 shadow-md border rounded-md bg-black text-white font-medium justify-center transition-colors items-center
+                    focus:ring-2 focus:ring-offset-2 focus:ring-black focus:outline-none hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none">
+                    <i icon-name="door-open" class="aspect-square w-4"></i>
+                    <span>Login</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero section -->
+    <main class="min-h-[80vh] flex items-center justify-center">
+        <div class="flex flex-col space-y-20">
+            <!-- top part -->
+            <div class="flex flex-col items-center space-y-10">
+                <!-- tagline -->
+                <div class="text-center font-extrabold flex flex-col space-y-8">
+                    <h2 class="text-7xl">Expanding connections</h2>
+                    <h2 class="relative text-6xl">
+                        <span class="peer">Empowering people</span>
+
+                        <!-- artifacts -->
+                        <div
+                            class="absolute -z-10 top-0 -bottom-5 left-28 right-28 flex blur-2xl opacity-80 transition-opacity peer-hover:opacity-100">
+                            <div class="w-full bg-[#bde0fe]"></div>
+                            <div class="w-full bg-[#ffc8dd]"></div>
+                            <div class="w-full bg-[#ffafcc]"></div>
+                        </div>
+                    </h2>
+                </div>
+
+                <!-- description -->
+                <p class="text-xl max-w-3xl font-medium text-center leading-loose text-slate-400">Our mission is to
+                    empower
+                    individuals and
+                    businesses
+                    alike by
+                    fostering genuine
+                    relationships and
+                    providing tailored networking opportunities.</p>
+            </div>
+
+            <!-- bottom section -->
+            <div class="flex justify-center space-x-8">
+                <button
+                    class="inline-flex select-none space-x-2 py-2 px-4 shadow-md border rounded-md bg-black text-white font-medium justify-center transition-colors items-center
+                    focus:ring-2 focus:ring-offset-2 focus:ring-black focus:outline-none hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none">
+                    <i icon-name="rocket" class="aspect-square w-5"></i>
+                    <span>Get started</span>
+                </button>
+                <button
+                    class="inline-flex select-none space-x-2 py-2 px-4 shadow-md border rounded-md bg-white text-black font-medium justify-center transition-colors items-center
+                    focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 focus:outline-none hover:bg-slate-100 disabled:opacity-50 disabled:pointer-events-none">
+                    <i icon-name="book-open" class="aspect-square w-5"></i>
+                    <span>Know more</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- additional scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons()</script>
+</body>
+
+</html>
