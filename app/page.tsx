@@ -4,53 +4,10 @@
  */
 
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { getProjects } from '../hooks'
 import { ExternalLink } from 'lucide-react'
 
 export const revalidate = 60
-
-export async function generateMetadata(): Promise<Metadata> {
-    return {
-        themeColor: '#1e293b',
-        creator: 'Vasanth Srivatsa',
-        applicationName: 'Try outs',
-        title: 'Try outs — Vasanth Srivatsa',
-        metadataBase: new URL('https://try.vsnth.dev'),
-        description: 'Playground where I 🥇 practice, ⚗️ experiment & ✨ create different components and pages.',
-        authors: {
-            name: 'Vasanth Srivatsa',
-            url: 'https://vsnth.dev'
-        },
-        icons: [
-            {
-                type: 'image/png',
-                sizes: '256x256',
-                url: 'https://vsnth.dev/api/siteIcon.png',
-            }
-        ],
-        twitter: {
-            creator: 'vsnthdev',
-            card: 'summary_large_image',
-            images: {
-                width: 1200,
-                height: 630,
-                alt: 'banner',
-                url: 'http://vsnth.dev/api/cover.png',
-                secureUrl: 'https://vsnth.dev/api/cover.png',
-            }
-        },
-        openGraph: {
-            images: {
-                width: 1200,
-                height: 630,
-                alt: 'banner',
-                url: 'http://vsnth.dev/api/cover.png',
-                secureUrl: 'https://vsnth.dev/api/cover.png',
-            }
-        }
-    }
-}
 
 export default async function Page() {
     const projects = await getProjects()

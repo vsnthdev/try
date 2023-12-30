@@ -4,7 +4,52 @@
  */
 
 import '../styles/index.css'
+import { Metadata, Viewport } from 'next'
 import { Footer, Header } from '../components'
+
+export const viewport: Viewport = {
+    themeColor: '#292524',
+    colorScheme: 'dark'
+}
+
+export const metadata: Metadata = {
+    creator: 'Vasanth Srivatsa',
+    applicationName: 'Try outs',
+    title: 'Try outs — Vasanth Srivatsa',
+    metadataBase: new URL('https://try.vsnth.dev'),
+    description: 'Playground where I 🥇 practice, ⚗️ experiment & ✨ create different components and pages.',
+    authors: {
+        name: 'Vasanth Srivatsa',
+        url: 'https://vsnth.dev'
+    },
+    icons: [
+        {
+            type: 'image/png',
+            sizes: '256x256',
+            url: 'https://vsnth.dev/api/siteIcon.png',
+        }
+    ],
+    twitter: {
+        creator: 'vsnthdev',
+        card: 'summary_large_image',
+        images: {
+            width: 1200,
+            height: 630,
+            alt: 'banner',
+            url: 'http://vsnth.dev/api/cover.png',
+            secureUrl: 'https://vsnth.dev/api/cover.png',
+        }
+    },
+    openGraph: {
+        images: {
+            width: 1200,
+            height: 630,
+            alt: 'banner',
+            url: 'http://vsnth.dev/api/cover.png',
+            secureUrl: 'https://vsnth.dev/api/cover.png',
+        }
+    }
+}
 
 export default function RootLayout({
     children,
