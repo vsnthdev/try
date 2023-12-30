@@ -5,7 +5,7 @@
 
 import Link from 'next/link'
 import { getProjects } from '../hooks'
-import { ExternalLink } from 'lucide-react'
+import { CodeIcon, EyeIcon } from 'lucide-react'
 
 export const revalidate = 60
 
@@ -18,28 +18,30 @@ export default async function Page() {
                 {/* page header */}
                 <div className='select-none relative mb-10 px-3 md:py-14 lg:py-14 xl:py-10'>
                     <h1 className='leading-normal text-center text-3xl font-medium sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal'>
-                        <span className='text-slate-500 xl:text-4xl'>Playground where I </span><br className='hidden md:inline' />
-                        <span>🥇 practice, ⚗️ experiment & ✨ create </span><br className='hidden lg:inline' />
-                        <span className='text-slate-500 xl:text-4xl '>different components and pages.</span>
+                        <span className='text-stone-400 xl:text-4xl'>Playground where I </span><br className='hidden md:inline' />
+                        <span className='text-stone-100'>🥇 practice, ⚗️ experiment & ✨ create </span><br className='hidden lg:inline' />
+                        <span className='text-stone-400 xl:text-4xl '>different components and pages.</span>
                     </h1>
                 </div>
 
                 {/* cards for different elements */}
                 <div className='flex flex-col space-y-12'>
-                    {projects.map(({ preview, title, type }) => <article key={title} className='p-8 bg-gradient-to-r from-slate-900 to-slate-800 select-none rounded-xl shadow-2xl shadow-black/[0.1] border border-slate-600 transition-colors hover:border-slate-400'>
+                    {projects.map(({ preview, title, type }) => <article key={title} className='p-8 bg-stone-800 select-none rounded-xl shadow-2xl shadow-black/[0.1] border border-stone-600 transition-colors hover:border-stone-400'>
                         <div className='flex flex-col space-y-8 md:space-y-0 md:flex-row'>
                             {/* title & type */}
                             <div className='flex flex-col space-y-2 md:flex-grow md:mr-4 xl:mr-8'>
                                 <span className='text-sm font-black uppercase tracking-widest opacity-30'>{type}</span>
-                                <h3 className='font-medium text-2xl '>{title}</h3>
+                                <h3 className='font-medium text-2xl text-stone-100'>{title}</h3>
                             </div>
 
                             {/* preview button */}
                             <div className='flex md:flex-col md:justify-center'>
-                                <Link href={preview} target='_blank' className='flex w-full justify-center font-medium items-center space-x-1 px-3 py-3 bg-slate-700 text-slate-200 rounded-md transition-all hover:text-white hover:bg-slate-600 active:scale-95 active:transform-gpu md:px-3 md:py-3'>
-                                    <ExternalLink className='h-[1.1rem] w-[1.1rem] md:h-5 md:w-5' strokeWidth={2.33} />
-                                    <span className='md:hidden'>Preview</span>
-                                </Link>
+                                <div className='flex w-full space-x-3 md:justify-center'>
+                                    <Link href={preview} target='_blank' className='flex w-full justify-center font-medium items-center space-x-1 px-3 py-3 bg-stone-700 text-stone-200 rounded-md transition-all hover:text-white hover:bg-stone-600 active:scale-95 active:transform-gpu'>
+                                        <EyeIcon className='h-5 w-5 md:h-5 md:w-5' />
+                                        <span className='text-sm md:hidden'>Preview</span>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </article>)}

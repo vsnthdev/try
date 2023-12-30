@@ -61,7 +61,7 @@ export default function RootLayout({
             {/* vyaktitva */}
             <link rel='stylesheet' href='https://vyaktitva.vercel.app/assets/css/fonts.css' />
         </head>
-        <body className='flex flex-col text-white bg-slate-1000 bg-dots bg-size-dots selection:bg-white/20'>
+        <body className='flex flex-col text-white bg-stone-900 bg-dots bg-size-dots selection:bg-white/20'>
             {/* header */}
             <Header />
 
