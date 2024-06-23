@@ -60,6 +60,9 @@ export default function RootLayout({
         <head>
             {/* vyaktitva */}
             <link rel='stylesheet' href='https://vyaktitva.vercel.app/assets/css/fonts.css' />
+
+            {/* Cloudflare Web Analytics */}
+            <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f9902879f44f4b6c8a7248bbeffc0736"}' />
         </head>
         <body className='flex flex-col text-white bg-stone-900 bg-dots bg-size-dots selection:bg-white/20'>
             {/* header */}
