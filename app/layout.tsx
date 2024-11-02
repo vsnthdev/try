@@ -6,6 +6,7 @@
 import '../styles/index.css'
 import { Metadata, Viewport } from 'next'
 import { Footer, Header } from '../components'
+import { Mixpanel } from '../components/Mixpanel'
 
 export const viewport: Viewport = {
     themeColor: '#292524',
@@ -60,11 +61,8 @@ export default function RootLayout({
         <head>
             {/* vyaktitva */}
             <link rel='stylesheet' href='https://vyaktitva.vercel.app/assets/css/fonts.css' />
-
-            {/* Cloudflare Web Analytics */}
-            <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f9902879f44f4b6c8a7248bbeffc0736"}' />
         </head>
-        <body className='flex flex-col text-white bg-stone-900 bg-dots bg-size-dots selection:bg-white/20'>
+        <body className='flex flex-col text-white bg-neutral-900 selection:bg-white/20'>
             {/* header */}
             <Header />
 
@@ -73,6 +71,7 @@ export default function RootLayout({
 
             {/* footer */}
             <Footer />
+            <Mixpanel />
         </body>
     </html>
 }
